@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <menu name="theme-color" content="#111111"></menu>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Manor Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/main.min.js" defer></script>
+</head>
+
+<body>
+    <main class="main">
+        <!-- Main Screen -->
+        <div class="manor">
+            <!-- Control -->
+            <div class="manor__btns">
+                <button class="calc-btn"></button>
+                <!-- <button class="castle-btn"></button> -->
+                <button class="fruit-btn"></button>
+            </div>
+            <div class="ms">
+                <button id="ms-minus" class="ms__btn">-</button>
+                <input id="ms-input" class="ms__input" type="text" autocomplete="off">
+                <button id="ms-plus" class="ms__btn">+</button>
+            </div>
+            <!-- Time -->
+            <div class="manor__timer timer">
+                <h2 class="timer__title title-sm">Time</h2>
+                <div class="timer__wrap">
+                    <div class="timer__hours">00</div>
+                    <span>:</span>
+                    <div class="timer__minutes">00</div>
+                    <span>:</span>
+                    <div class="timer__seconds">00</div>
+                </div>
+            </div>
+        </div>
+        <!-- Manor Territory -->
+        <div class="territory">
+            <div class="territory__content">
+                <button class="close-btn">Close</button>
+                <ul class="castles">
+                    <li class="castles__item">
+                        <div class="territory__castle-name">Gludio Castle</div>
+                        <div class="territory__castle-location">
+                            Talking Island, Gludin Village, Forgotten Temple, Langk Lizardman Dwelling, Abandoned Camp,
+                            Fellmere Lake, Orc Barracks, Gludio Castle Town, Gludio Castle, Maille Lizrdman Barracks,
+                            Wasteland, The Ant Nest, Ruins of Agony, Ruins of Despair, Neutral Zone
+                        </div>
+                    </li>
+                    <li class="castles__item">
+                        <div class="territory__castle-name">Dion Castle</div>
+                        <div class="territory__castle-location">
+                            Dion Castle Town, Floran Village, Beehive, Execution Grounds, Partisan Hideaway, Cruma
+                            Tower,
+                            Monster Derby Track, Giran Harbor
+                        </div>
+                    </li>
+                    <li class="castles__item">
+                        <div class="territory__castle-name">Innadril Castle</div>
+                        <div class="territory__castle-location">
+                            Heine, Field of Silence, Field of Whispers, Innadril Castle, Devil's Isle, Pirate Tunnel,
+                            Garden
+                            of Eva
+                        </div>
+                    </li>
+                    <li class="castles__item">
+                        <div class="territory__castle-name">Giran Castle</div>
+                        <div class="territory__castle-location">
+                            Alligator Island, Tanor Canyon, Giran Castle Town, Giran Castle, Death Pass, Dragon Valley,
+                            Lair
+                            of Antharas
+                        </div>
+                    </li>
+                    <li class="castles__item">
+                        <div class="territory__castle-name">Oren Castle</div>
+                        <div class="territory__castle-location">
+                            Town of Oren, Dark Elven Village, Swampland, Black Magic Laboratory, Altar of Rites, Windy
+                            Hill,
+                            Elven Village, Iris Lake, Elven Fortress, Ivory Tower, Plains of the Lizardmen, Sea of
+                            Spores,
+                            Bandit Stronghold
+                        </div>
+                    </li>
+                    <li class="castles__item">
+                        <div class="territory__castle-name">Aden Castle</div>
+                        <div class="territory__castle-location">
+                            Town of Aden, Tower of Insolence, Border Outpost, Blazing Swamp, Giants Cave, The Cemetery,
+                            Forbidden Gateway, Devastated Castle, Forsaken Plains, Silent Valley, Narsell Lake, Anghell
+                            Waterfall, Forest of Mirrors, Enchanted Valley, Hunter Village
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Fruits -->
+        <div class="fruits">
+            <div class="fruits__contents">
+                <!-- <button class="fruit-close-btn">Close</button> -->
+                <div class="fruits__group">
+                    <div class="fruits-towns">
+                        <button class="fruits-towns__btn active" tab-btn>Gludio</button>
+                        <button class="fruits-towns__btn" tab-btn>Dion</button>
+                        <button class="fruits-towns__btn" tab-btn>Giran</button>
+                        <button class="fruits-towns__btn" tab-btn>Oren</button>
+                        <button class="fruits-towns__btn" tab-btn>Aden</button>
+                        <button class="fruits-towns__btn" tab-btn>Innadril</button>
+                        <button class="fruits-towns__btn" tab-btn>Goddard</button>
+                    </div>
+                    <button class="fruit-close-btn">Закрыть</button>
+                </div>
+                <!-- GLUDIO -->
+                <div class="fruits__items open" tab-content>
+                    <table class="fruits-table">
+                        <!-- Table Headline -->
+                        <tr>
+                            <th>&nbsp</th>
+                            <th class="fruits-name">Name</th>
+                            <th class="fruits-level">Level</th>
+                            <th class="fruits-bounty">Bounty</th>
+                            <th class="fruits-bounty">Bounty</th>
+                        </tr>
+
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/dark-coda.png" alt="Dark coda">
+                            </td>
+                            <td class="fruits-name">Dark Coda</td>
+                            <td class="fruits-level">5 - 15</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/stem.png" alt="Stem">
+                                <span>Stem</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/bh.png" alt="Braided hemp">
+                                <span>Braided hemp</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/red-coda.png" alt="Red coda">
+                            </td>
+                            <td class="fruits-name">Red Coda</td>
+                            <td class="fruits-level">8 - 18</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/varnish.png" alt="Varnish">
+                                <span>Varnis</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cokes.png" alt="Cokes">
+                                <span>Cokes</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/chilly-coda.png" alt="Chilly coda">
+                            </td>
+                            <td class="fruits-name">Chilly Coda</td>
+                            <td class="fruits-level">11 - 21</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/suede.png" alt="Suede">
+                                <span>Suede</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/oo.png" alt="Oriharukon Ore">
+                                <span>Oriharukon Ore</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/blue-coda.png" alt="Blue coda">
+                            </td>
+                            <td class="fruits-name">Blue Coda</td>
+                            <td class="fruits-level">14 - 24</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/as.png" alt="Animal Skin">
+                                <span>Animal Skin</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cl2.png" alt="Crafted Leather">
+                                <span>Crafted Leather</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/golden-coda.png" alt="Golden Coda">
+                            </td>
+                            <td class="fruits-name">Golden Coda</td>
+                            <td class="fruits-level">17 -27</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thread.png" alt="Thread">
+                                <span>Thread</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mo.png" alt="Mithril Ore">
+                                <span>Mithril Ore</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/lute-coda.png" alt="Lute Coda">
+                            </td>
+                            <td class="fruits-name">Lute Coda</td>
+                            <td class="fruits-level">20 - 30</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/io.png" alt="Iron Ore">
+                                <span>Iron Ore</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mf.png" alt="Metallic Fiber">
+                                <span>Metallic Fiber</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/desert-coda.png" alt="Desert Coda">
+                            </td>
+                            <td class="fruits-name">Desert Coda</td>
+                            <td class="fruits-level">23 - 33</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/coal.png" alt="Coal">
+                                <span>Coal</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/an.png" alt="Adamantite Nugget">
+                                <span>Adamantite Nugget</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/red-cobol.png" alt="Red Cobol">
+                            </td>
+                            <td class="fruits-name">Red Cobol</td>
+                            <td class="fruits-level">26 - 36</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/charcoal.png" alt="Charcoal">
+                                <span>Charcoal</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/enria.png" alt="Enria">
+                                <span>Enria</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/chilly-cobol.png" alt="Chilly Cobol">
+                            </td>
+                            <td class="fruits-name">Chilly Cobol</td>
+                            <td class="fruits-level">29 - 39</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ab.png" alt="Animal Bone">
+                                <span>Animal Bone</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/steel.png" alt="Steel">
+                                <span>Steel</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/blue-cobol.png" alt="Blue Cobol">
+                            </td>
+                            <td class="fruits-name">Blue Cobol</td>
+                            <td class="fruits-level">32 - 42</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/sn.png" alt="Silver Nugget">
+                                <span>Silver Nugget</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thons.png" alt="Thons">
+                                <span>Thons</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/chilly-codran.png" alt="Chilly Codran">
+                            </td>
+                            <td class="fruits-name">Chilly Codran</td>
+                            <td class="fruits-level">47 - 57</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/io.png" alt="Iron Ore">
+                                <span>Iron Ore</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mh.png" alt="Mold Hardener">
+                                <span>Mold Hardener</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/blue-codran.png" alt="Blue Codran">
+                            </td>
+                            <td class="fruits-name">Blue Codran</td>
+                            <td class="fruits-level">50 - 60</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/coal.png" alt="Coal">
+                                <span>Coal</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/Leather2.png" alt="Leather">
+                                <span>Leather</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/twin-codran.png" alt="Twin Codran">
+                            </td>
+                            <td class="fruits-name">Twin Codran</td>
+                            <td class="fruits-level">53 - 63</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/charcoal.png" alt="Charcoal">
+                                <span>Charcoal</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ml.png" alt="Mold Lubricant">
+                                <span>Mold Lubricant</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/great-codran.png" alt="Great Codran">
+                            </td>
+                            <td class="fruits-name">Great Codran</td>
+                            <td class="fruits-level">56 - 66</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ab.png" alt="Animal Bone">
+                                <span>Animal Bone</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cbp.png" alt="Coarse Bone Powder">
+                                <span>Coarse Bone Powder</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/desert-codran.png" alt="Desert Codran">
+                            </td>
+                            <td class="fruits-name">Desert Codran</td>
+                            <td class="fruits-level">59 - 69</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/sn.png" alt="Silver Nugget">
+                                <span>Silver Nugget</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/dmp.png" alt="Durable Metal Plate">
+                                <span>Durable Metal Plate</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/blue-coba.png" alt="Blue Coba">
+                            </td>
+                            <td class="fruits-name">Blue Coba</td>
+                            <td class="fruits-level">62 - 72</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cl2.png" alt="Crafted Leather">
+                                <span>Crafted Leather</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mg.png" alt="Mold Glue">
+                                <span>Mold Glue</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- DION -->
+                <div class="fruits__items" tab-content>
+                    <table class="fruits-table">
+                        <!-- Table Headline -->
+                        <tr>
+                            <th>&nbsp</th>
+                            <th class="fruits-name">Name</th>
+                            <th class="fruits-level">Level</th>
+                            <th class="fruits-bounty">Bounty</th>
+                            <th class="fruits-bounty">Bounty</th>
+                        </tr>
+
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/blue-coda.png" alt="Blue coda">
+                            </td>
+                            <td class="fruits-name">Blue Coda</td>
+                            <td class="fruits-level">14 - 24</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/as.png" alt="Animal Skin">
+                                <span>Animal Skin</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cl2.png" alt="Crafted Leather">
+                                <span>Crafted Leather</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/golden-coda.png" alt="Golden Coda">
+                            </td>
+                            <td class="fruits-name">Golden Coda</td>
+                            <td class="fruits-level">17 - 27</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thread.png" alt="Thread">
+                                <span>Thread</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mo.png" alt="Mithril Ore">
+                                <span>Mithril Ore</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/lute-coda.png" alt="Lute Coda">
+                            </td>
+                            <td class="fruits-name">Lute Coda</td>
+                            <td class="fruits-level">20 - 30</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/io.png" alt="Iron Ore">
+                                <span>Iron Ore</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mf.png" alt="Metallic Fiber">
+                                <span>Metallic Fiber</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/desert-coda.png" alt="Desert Coda">
+                            </td>
+                            <td class="fruits-name">Desert Coda</td>
+                            <td class="fruits-level">23 - 33</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/coal.png" alt="Coal">
+                                <span>Coal</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/an.png" alt="Adamantite Nugget">
+                                <span>Adamantite Nugget</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/red-cobol.png" alt="Red Cobol">
+                            </td>
+                            <td class="fruits-name">Red Cobol</td>
+                            <td class="fruits-level">26 - 36</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/charcoal.png" alt="Charcoal">
+                                <span>Charcoal</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/enria.png" alt="Enria">
+                                <span>Enria</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/chilly-cobol.png" alt="Chilly Cobol">
+                            </td>
+                            <td class="fruits-name">Chilly Cobol</td>
+                            <td class="fruits-level">29 - 39</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ab.png" alt="Animal Bone">
+                                <span>Animal Bone</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/steel.png" alt="Steel">
+                                <span>Steel</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/blue-cobol.png" alt="Blue Cobol">
+                            </td>
+                            <td class="fruits-name">Blue Cobol</td>
+                            <td class="fruits-level">32 - 42</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/sn.png" alt="Silver Nugget">
+                                <span>Silver Nugget</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thons.png" alt="Thons">
+                                <span>Thons</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/thorn-cobol.png" alt="Thorn Cobol">
+                            </td>
+                            <td class="fruits-name">Thorn Cobol</td>
+                            <td class="fruits-level">35 - 45</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/stem.png" alt="Stem">
+                                <span>Stem</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mt.png" alt="Metallic Thread">
+                                <span>Metallic Thread</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/golden-cobol.png" alt="Golden Cobol">
+                            </td>
+                            <td class="fruits-name">Golden Cobol</td>
+                            <td class="fruits-level">38 - 48</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/varnish.png" alt="Varnish">
+                                <span>Varnish</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mg.png" alt="Mold Glue">
+                                <span>Mold Glue</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/great-cobol.png" alt="Great Cobol">
+                            </td>
+                            <td class="fruits-name">Great Cobol</td>
+                            <td class="fruits-level">41 - 51</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/suede.png" alt="Suede">
+                                <span>Suede</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/hgs.png" alt="High Grade Suede">
+                                <span>High Grade Suede</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/red-codran.png" alt="Red Codran">
+                            </td>
+                            <td class="fruits-name">Red Codran</td>
+                            <td class="fruits-level">44 - 54</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/as.png" alt="Animal Skin">
+                                <span>Animal Skin</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/asofe.png" alt="Asofe">
+                                <span>Asofe</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/sea-codran.png" alt="Sea Codran">
+                            </td>
+                            <td class="fruits-name">Sea Codran</td>
+                            <td class="fruits-level">45 - 55</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thread.png" alt="Thread">
+                                <span>Thread</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cord.png" alt="Cord">
+                                <span>Cord</span>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+                <!-- GIRAN -->
+                <div class="fruits__items" tab-content>
+                    <!-- style="display:none" -->
+                    <table class="fruits-table">
+                        <!-- Table Headline -->
+                        <tr>
+                            <th>&nbsp</th>
+                            <th class="fruits-name">Name</th>
+                            <th class="fruits-level">Level</th>
+                            <th class="fruits-bounty">Bounty</th>
+                            <th class="fruits-bounty">Bounty</th>
+                        </tr>
+
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/red-cobol.png" alt="Red Cobol">
+                            </td>
+                            <td class="fruits-name">Red Cobol</td>
+                            <td class="fruits-level">26 - 36</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/charcoal.png" alt="Charcoal">
+                                <span>Charcoal</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/enria.png" alt="Enria">
+                                <span>Enria</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/chilly-cobol.png" alt="Chilly Cobol">
+                            </td>
+                            <td class="fruits-name">Chilly Cobol</td>
+                            <td class="fruits-level">29 - 39</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ab.png" alt="Animal Bone">
+                                <span>Animal Bone</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/steel.png" alt="Steel">
+                                <span>Steel</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/blue-cobol.png" alt="Blue Cobol">
+                            </td>
+                            <td class="fruits-name">Blue Cobol</td>
+                            <td class="fruits-level">32 - 42</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/sn.png" alt="Silver Nugget">
+                                <span>Silver Nugget</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thons.png" alt="Thons">
+                                <span>Thons</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/thorn-cobol.png" alt="Thorn Cobol">
+                            </td>
+                            <td class="fruits-name">Thorn Cobol</td>
+                            <td class="fruits-level">35 - 45</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/stem.png" alt="Stem">
+                                <span>Stem</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mt.png" alt="Metallic Thread">
+                                <span>Metallic Thread</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/golden-cobol.png" alt="Golden Cobol">
+                            </td>
+                            <td class="fruits-name">Golden Cobol</td>
+                            <td class="fruits-level">38 - 42</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/varnish.png" alt="Varnish">
+                                <span>Varnish</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mg.png" alt="Mold Glue">
+                                <span>Mold Glue</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/great-cobol.png" alt="Great Cobol">
+                            </td>
+                            <td class="fruits-name">Great Cobol</td>
+                            <td class="fruits-level">41 - 51</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/suede.png" alt="Suede">
+                                <span>Suede</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/hgs.png" alt="High Grade Suede">
+                                <span>High Grade Suede</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/red-codran.png" alt="Red Codran">
+                            </td>
+                            <td class="fruits-name">Red Codran</td>
+                            <td class="fruits-level">44 - 54</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/as.png" alt="Animal Skin">
+                                <span>Animal Skin</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/asofe.png" alt="Asofe">
+                                <span>Asofe</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/sea-codran.png" alt="Sea Codran">
+                            </td>
+                            <td class="fruits-name">Sea Codran</td>
+                            <td class="fruits-level">45 - 55</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thread.png" alt="Thread">
+                                <span>Thread</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cord.png" alt="Cord">
+                                <span>Cord</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/chilly-codran.png" alt="Chilly Codran">
+                            </td>
+                            <td class="fruits-name">Chilly Codran</td>
+                            <td class="fruits-level">47 - 57</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/io.png" alt="Iron Ore">
+                                <span>Iron Ore</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mh.png" alt="Mold Hardener">
+                                <span>Mold Hardener</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/blue-codran.png" alt="Blue Codran">
+                            </td>
+                            <td class="fruits-name">Blue Codran</td>
+                            <td class="fruits-level">50 - 60</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/coal.png" alt="Coal">
+                                <span>Coal</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/leather2.png" alt="Leather">
+                                <span>Leather</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/twin-codran.png" alt="Twin Codran">
+                            </td>
+                            <td class="fruits-name">Twin Codran</td>
+                            <td class="fruits-level">53 - 63</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/charcoal.png" alt="Charcoal">
+                                <span>Charcoal</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ml.png" alt="Mold Lubricant">
+                                <span>Mold Lubricant</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/great-codran.png" alt="Great Codran">
+                            </td>
+                            <td class="fruits-name">Great Codran</td>
+                            <td class="fruits-level">56 - 66</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ab.png" alt="Animal Bone">
+                                <span>Animal Bone</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cbp.png" alt="Coarse Bone Powder">
+                                <span>Coarse Bone Powder</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/desert-codran.png" alt="Desert Codran">
+                            </td>
+                            <td class="fruits-name">Desert Codran</td>
+                            <td class="fruits-level">59 - 69</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/sn.png" alt="Silver Nugget">
+                                <span>Silver Nugget</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/dmp.png" alt="Durable Metal Plate">
+                                <span>Durable Metal Plate</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/blue-coba.png" alt="Blue Coba">
+                            </td>
+                            <td class="fruits-name">Blue Coba</td>
+                            <td class="fruits-level">62 - 72</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cl2.png" alt="Crafted Leather">
+                                <span>Crafted Leather</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mg.png" alt="Mold Glue">
+                                <span>Mold Glue</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/red-coba.png" alt="Red Coba">
+                            </td>
+                            <td class="fruits-name">Red Coba</td>
+                            <td class="fruits-level">65 - 75</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/synt-cokes.png" alt="Synthetic Cokes">
+                                <span>Synthetic Cokes</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ml.png" alt="Mold Lubricant">
+                                <span>Mold Lubricant</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/gold-coba.png" alt="Gold Coba">
+                            </td>
+                            <td class="fruits-name">Gold Coba</td>
+                            <td class="fruits-level">68 - 78</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/vop.png" alt="Varnish of Purity">
+                                <span>Varnish of Purity</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mh.png" alt="Mold Hardener">
+                                <span>Mold Hardener</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- OREN -->
+                <div class="fruits__items" tab-content>
+                    <table class="fruits-table">
+                        <!-- Table Headline -->
+                        <tr>
+                            <th>&nbsp</th>
+                            <th class="fruits-name">Name</th>
+                            <th class="fruits-level">Level</th>
+                            <th class="fruits-bounty">Bounty</th>
+                            <th class="fruits-bounty">Bounty</th>
+                        </tr>
+
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/dark-coda.png" alt="Dark coda">
+                            </td>
+                            <td class="fruits-name">Dark Coda</td>
+                            <td class="fruits-level">5 - 15</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/stem.png" alt="Stem">
+                                <span>Stem</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/bh.png" alt="Braided hemp">
+                                <span>Braided hemp</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/red-coda.png" alt="Red coda">
+                            </td>
+                            <td class="fruits-name">Red Coda</td>
+                            <td class="fruits-level">8 - 18</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/varnish.png" alt="Varnish">
+                                <span>Varnis</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cokes.png" alt="Cokes">
+                                <span>Cokes</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/chilly-coda.png" alt="Chilly coda">
+                            </td>
+                            <td class="fruits-name">Chilly Coda</td>
+                            <td class="fruits-level">11 - 21</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/suede.png" alt="Suede">
+                                <span>Suede</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/oo.png" alt="Oriharukon Ore">
+                                <span>Oriharukon Ore</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/blue-coda.png" alt="Blue coda">
+                            </td>
+                            <td class="fruits-name">Blue Coda</td>
+                            <td class="fruits-level">14 - 24</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/as.png" alt="Animal Skin">
+                                <span>Animal Skin</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cl2.png" alt="Crafted Leather">
+                                <span>Crafted Leather</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/golden-coda.png" alt="Golden Coda">
+                            </td>
+                            <td class="fruits-name">Golden Coda</td>
+                            <td class="fruits-level">17 - 27</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thread.png" alt="Thread">
+                                <span>Thread</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mo.png" alt="Mithril Ore">
+                                <span>Mithril Ore</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <!-- <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/lute-coda.png" alt="Lute Coda">
+                            </td>
+                            <td class="fruits-name">Lute Coda</td>
+                            <td class="fruits-level">25</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/io.png" alt="Iron Ore">
+                                <span>Iron Ore</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mf.png" alt="Metallic Fiber">
+                                <span>Metallic Fiber</span>
+                            </td>
+                        </tr> -->
+                        <!-- Fruit Item -->
+                        <!-- <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/desert-coda.png" alt="Desert Coda">
+                            </td>
+                            <td class="fruits-name">Desert Coda</td>
+                            <td class="fruits-level">28</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/coal.png" alt="Coal">
+                                <span>Coal</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/an.png" alt="Adamantite Nugget">
+                                <span>Adamantite Nugget</span>
+                            </td>
+                        </tr> -->
+                        <!-- Fruit Item -->
+                        <!-- <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/red-cobol.png" alt="Red Cobol">
+                            </td>
+                            <td class="fruits-name">Red Cobol</td>
+                            <td class="fruits-level">31</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/charcoal.png" alt="Charcoal">
+                                <span>Charcoal</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/enria.png" alt="Enria">
+                                <span>Enria</span>
+                            </td>
+                        </tr> -->
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/chilly-cobol.png" alt="Chilly Cobol">
+                            </td>
+                            <td class="fruits-name">Chilly Cobol</td>
+                            <td class="fruits-level">29 - 39</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ab.png" alt="Animal Bone">
+                                <span>Animal Bone</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/steel.png" alt="Steel">
+                                <span>Steel</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/blue-cobol.png" alt="Blue Cobol">
+                            </td>
+                            <td class="fruits-name">Blue Cobol</td>
+                            <td class="fruits-level">32 - 42</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/sn.png" alt="Silver Nugget">
+                                <span>Silver Nugget</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thons.png" alt="Thons">
+                                <span>Thons</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/thorn-cobol.png" alt="Thorn Cobol">
+                            </td>
+                            <td class="fruits-name">Thorn Cobol</td>
+                            <td class="fruits-level">35 - 45</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/stem.png" alt="Stem">
+                                <span>Stem</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mt.png" alt="Metallic Thread">
+                                <span>Metallic Thread</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/golden-cobol.png" alt="Golden Cobol">
+                            </td>
+                            <td class="fruits-name">Golden Cobol</td>
+                            <td class="fruits-level">38 - 48</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/varnish.png" alt="Varnish">
+                                <span>Varnish</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mg.png" alt="Mold Glue">
+                                <span>Mold Glue</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/great-cobol.png" alt="Great Cobol">
+                            </td>
+                            <td class="fruits-name">Great Cobol</td>
+                            <td class="fruits-level">41 - 51</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/suede.png" alt="Suede">
+                                <span>Suede</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/hgs.png" alt="High Grade Suede">
+                                <span>High Grade Suede</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/red-codran.png" alt="Red Codran">
+                            </td>
+                            <td class="fruits-name">Red Codran</td>
+                            <td class="fruits-level">44 - 54</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/as.png" alt="Animal Skin">
+                                <span>Animal Skin</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/asofe.png" alt="Asofe">
+                                <span>Asofe</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/sea-codran.png" alt="Sea Codran">
+                            </td>
+                            <td class="fruits-name">Sea Codran</td>
+                            <td class="fruits-level">45 - 55</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thread.png" alt="Thread">
+                                <span>Thread</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cord.png" alt="Cord">
+                                <span>Cord</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/chilly-codran.png" alt="Chilly Codran">
+                            </td>
+                            <td class="fruits-name">Chilly Codran</td>
+                            <td class="fruits-level">47 - 57</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/io.png" alt="Iron Ore">
+                                <span>Iron Ore</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mh.png" alt="Mold Hardener">
+                                <span>Mold Hardener</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/blue-codran.png" alt="Blue Codran">
+                            </td>
+                            <td class="fruits-name">Blue Codran</td>
+                            <td class="fruits-level">50 - 60</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/coal.png" alt="Coal">
+                                <span>Coal</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/leather2.png" alt="Leather">
+                                <span>Leather</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/twin-codran.png" alt="Twin Codran">
+                            </td>
+                            <td class="fruits-name">Twin Codran</td>
+                            <td class="fruits-level">53 - 63</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/charcoal.png" alt="Charcoal">
+                                <span>Charcoal</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ml.png" alt="Mold Lubricant">
+                                <span>Mold Lubricant</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/gold-coba.png" alt="Gold Coba">
+                            </td>
+                            <td class="fruits-name">Gold Coba</td>
+                            <td class="fruits-level">68 - 78</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/vop.png" alt="Varnish of Purity">
+                                <span>Varnish of Purity</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mh.png" alt="Mold Hardener">
+                                <span>Mold Hardener</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/desert-coba.png" alt="Desert Coba">
+                            </td>
+                            <td class="fruits-name">Desert Coba</td>
+                            <td class="fruits-level">71 - 81</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/asofe.png" alt="Asofe">
+                                <span>Asofe</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ma.png" alt="Mithril Alloy">
+                                <span>Mithril Alloy</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/sea-coba.png" alt="Sea Coba">
+                            </td>
+                            <td class="fruits-name">Sea Coba</td>
+                            <td class="fruits-level">74 - 84</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thons.png" alt="Thons">
+                                <span>Thons</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/enria.png" alt="Enria">
+                                <span>Enria</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- ADEN -->
+                <div class="fruits__items" tab-content>
+                    <table class="fruits-table">
+                        <!-- Table Headline -->
+                        <tr>
+                            <th>&nbsp</th>
+                            <th class="fruits-name">Name</th>
+                            <th class="fruits-level">Level</th>
+                            <th class="fruits-bounty">Bounty</th>
+                            <th class="fruits-bounty">Bounty</th>
+                        </tr>
+
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/thorn-cobol.png" alt="Thorn Cobol">
+                            </td>
+                            <td class="fruits-name">Thorn Cobol</td>
+                            <td class="fruits-level">35 - 45</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/stem.png" alt="Stem">
+                                <span>Stem</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mt.png" alt="Metallic Thread">
+                                <span>Metallic Thread</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/golden-cobol.png" alt="Golden Cobol">
+                            </td>
+                            <td class="fruits-name">Golden Cobol</td>
+                            <td class="fruits-level">38 - 48</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/varnish.png" alt="Varnish">
+                                <span>Varnish</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mg.png" alt="Mold Glue">
+                                <span>Mold Glue</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/great-cobol.png" alt="Great Cobol">
+                            </td>
+                            <td class="fruits-name">Great Cobol</td>
+                            <td class="fruits-level">41 - 51</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/suede.png" alt="Suede">
+                                <span>Suede</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/hgs.png" alt="High Grade Suede">
+                                <span>High Grade Suede</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/red-codran.png" alt="Red Codran">
+                            </td>
+                            <td class="fruits-name">Red Codran</td>
+                            <td class="fruits-level">44 - 54</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/as.png" alt="Animal Skin">
+                                <span>Animal Skin</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/asofe.png" alt="Asofe">
+                                <span>Asofe</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/sea-codran.png" alt="Sea Codran">
+                            </td>
+                            <td class="fruits-name">Sea Codran</td>
+                            <td class="fruits-level">45 - 55</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thread.png" alt="Thread">
+                                <span>Thread</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cord.png" alt="Cord">
+                                <span>Cord</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/chilly-codran.png" alt="Chilly Codran">
+                            </td>
+                            <td class="fruits-name">Chilly Codran</td>
+                            <td class="fruits-level">47 - 57</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/io.png" alt="Iron Ore">
+                                <span>Iron Ore</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mh.png" alt="Mold Hardener">
+                                <span>Mold Hardener</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/blue-codran.png" alt="Blue Codran">
+                            </td>
+                            <td class="fruits-name">Blue Codran</td>
+                            <td class="fruits-level">50 - 60</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/coal.png" alt="Coal">
+                                <span>Coal</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/leather2.png" alt="Leather">
+                                <span>Leather</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/twin-codran.png" alt="Twin Codran">
+                            </td>
+                            <td class="fruits-name">Twin Codran</td>
+                            <td class="fruits-level">53 - 63</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/charcoal.png" alt="Charcoal">
+                                <span>Charcoal</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ml.png" alt="Mold Lubricant">
+                                <span>Mold Lubricant</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/great-codran.png" alt="Great Codran">
+                            </td>
+                            <td class="fruits-name">Great Codran</td>
+                            <td class="fruits-level">56 - 66</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ab.png" alt="Animal Bone">
+                                <span>Animal Bone</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cbp.png" alt="Coarse Bone Powder">
+                                <span>Coarse Bone Powder</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/desert-codran.png" alt="Desert Codran">
+                            </td>
+                            <td class="fruits-name">Desert Codran</td>
+                            <td class="fruits-level">59 - 69</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/sn.png" alt="Silver Nugget">
+                                <span>Silver Nugget</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/dmp.png" alt="Durable Metal Plate">
+                                <span>Durable Metal Plate</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/blue-coba.png" alt="Blue Coba">
+                            </td>
+                            <td class="fruits-name">Blue Coba</td>
+                            <td class="fruits-level">62 - 72</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cl2.png" alt="Crafted Leather">
+                                <span>Crafted Leather</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mg.png" alt="Mold Glue">
+                                <span>Mold Glue</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/red-coba.png" alt="Red Coba">
+                            </td>
+                            <td class="fruits-name">Red Coba</td>
+                            <td class="fruits-level">65 - 75</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/synt-cokes.png" alt="Synthetic Cokes">
+                                <span>Synthetic Cokes</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ml.png" alt="Mold Lubricant">
+                                <span>Mold Lubricant</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/gold-coba.png" alt="Gold Coba">
+                            </td>
+                            <td class="fruits-name">Gold Coba</td>
+                            <td class="fruits-level">68 - 78</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/vop.png" alt="Varnish of Purity">
+                                <span>Varnish of Purity</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mh.png" alt="Mold Hardener">
+                                <span>Mold Hardener</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/desert-coba.png" alt="Desert Coba">
+                            </td>
+                            <td class="fruits-name">Desert Coba</td>
+                            <td class="fruits-level">71 - 81</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/asofe.png" alt="Asofe">
+                                <span>Asofe</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ma.png" alt="Mithril Alloy">
+                                <span>Mithril Alloy</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/sea-coba.png" alt="Sea Coba">
+                            </td>
+                            <td class="fruits-name">Sea Coba</td>
+                            <td class="fruits-level">74 - 84</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thons.png" alt="Thons">
+                                <span>Thons</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/enria.png" alt="Enria">
+                                <span>Enria</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- INHADRIL -->
+                <div class="fruits__items" tab-content>
+                    <table class="fruits-table">
+                        <!-- Table Headline -->
+                        <tr>
+                            <th>&nbsp</th>
+                            <th class="fruits-name">Name</th>
+                            <th class="fruits-level">Level</th>
+                            <th class="fruits-bounty">Bounty</th>
+                            <th class="fruits-bounty">Bounty</th>
+                        </tr>
+
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/chilly-cobol.png" alt="Chilly Cobol">
+                            </td>
+                            <td class="fruits-name">Chilly Cobol</td>
+                            <td class="fruits-level">29 - 39</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ab.png" alt="Animal Bone">
+                                <span>Animal Bone</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/steel.png" alt="Steel">
+                                <span>Steel</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/blue-cobol.png" alt="Blue Cobol">
+                            </td>
+                            <td class="fruits-name">Blue Cobol</td>
+                            <td class="fruits-level">32 - 42</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/sn.png" alt="Silver Nugget">
+                                <span>Silver Nugget</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thons.png" alt="Thons">
+                                <span>Thons</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/thorn-cobol.png" alt="Thorn Cobol">
+                            </td>
+                            <td class="fruits-name">Thorn Cobol</td>
+                            <td class="fruits-level">35 - 45</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/stem.png" alt="Stem">
+                                <span>Stem</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mt.png" alt="Metallic Thread">
+                                <span>Metallic Thread</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/golden-cobol.png" alt="Golden Cobol">
+                            </td>
+                            <td class="fruits-name">Golden Cobol</td>
+                            <td class="fruits-level">38 - 48</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/varnish.png" alt="Varnish">
+                                <span>Varnish</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mg.png" alt="Mold Glue">
+                                <span>Mold Glue</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/great-cobol.png" alt="Great Cobol">
+                            </td>
+                            <td class="fruits-name">Great Cobol</td>
+                            <td class="fruits-level">41 - 51</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/suede.png" alt="Suede">
+                                <span>Suede</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/hgs.png" alt="High Grade Suede">
+                                <span>High Grade Suede</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/red-codran.png" alt="Red Codran">
+                            </td>
+                            <td class="fruits-name">Red Codran</td>
+                            <td class="fruits-level">44 - 54</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/as.png" alt="Animal Skin">
+                                <span>Animal Skin</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/asofe.png" alt="Asofe">
+                                <span>Asofe</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/sea-codran.png" alt="Sea Codran">
+                            </td>
+                            <td class="fruits-name">Sea Codran</td>
+                            <td class="fruits-level">45 - 55</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thread.png" alt="Thread">
+                                <span>Thread</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cord.png" alt="Cord">
+                                <span>Cord</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/red-coba.png" alt="Red Coba">
+                            </td>
+                            <td class="fruits-name">Red Coba</td>
+                            <td class="fruits-level">65 - 75</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/synt-cokes.png" alt="Synthetic Cokes">
+                                <span>Synthetic Cokes</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ml.png" alt="Mold Lubricant">
+                                <span>Mold Lubricant</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/gold-coba.png" alt="Gold Coba">
+                            </td>
+                            <td class="fruits-name">Gold Coba</td>
+                            <td class="fruits-level">68 - 78</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/vop.png" alt="Varnish of Purity">
+                                <span>Varnish of Purity</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mh.png" alt="Mold Hardener">
+                                <span>Mold Hardener</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/desert-coba.png" alt="Desert Coba">
+                            </td>
+                            <td class="fruits-name">Desert Coba</td>
+                            <td class="fruits-level">71 - 81</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/asofe.png" alt="Asofe">
+                                <span>Asofe</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ma.png" alt="Mithril Alloy">
+                                <span>Mithril Alloy</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- Goddard -->
+                <div class="fruits__items" tab-content>
+                    <table class="fruits-table">
+                        <!-- Table Headline -->
+                        <tr>
+                            <th>&nbsp</th>
+                            <th class="fruits-name">Name</th>
+                            <th class="fruits-level">Level</th>
+                            <th class="fruits-bounty">Bounty</th>
+                            <th class="fruits-bounty">Bounty</th>
+                        </tr>
+
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/chilly-cobol.png" alt="Chilly Cobol">
+                            </td>
+                            <td class="fruits-name">Chilly Cobol</td>
+                            <td class="fruits-level">29 - 39</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ab.png" alt="Animal Bone">
+                                <span>Animal Bone</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/steel.png" alt="Steel">
+                                <span>Steel</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/blue-cobol.png" alt="Blue Cobol">
+                            </td>
+                            <td class="fruits-name">Blue Cobol</td>
+                            <td class="fruits-level">32 - 42</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/sn.png" alt="Silver Nugget">
+                                <span>Silver Nugget</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thons.png" alt="Thons">
+                                <span>Thons</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/thorn-cobol.png" alt="Thorn Cobol">
+                            </td>
+                            <td class="fruits-name">Thorn Cobol</td>
+                            <td class="fruits-level">35 - 45</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/stem.png" alt="Stem">
+                                <span>Stem</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mt.png" alt="Metallic Thread">
+                                <span>Metallic Thread</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/golden-cobol.png" alt="Golden Cobol">
+                            </td>
+                            <td class="fruits-name">Golden Cobol</td>
+                            <td class="fruits-level">38 - 48</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/varnish.png" alt="Varnish">
+                                <span>Varnish</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mg.png" alt="Mold Glue">
+                                <span>Mold Glue</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/great-cobol.png" alt="Great Cobol">
+                            </td>
+                            <td class="fruits-name">Great Cobol</td>
+                            <td class="fruits-level">41 - 51</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/suede.png" alt="Suede">
+                                <span>Suede</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/hgs.png" alt="High Grade Suede">
+                                <span>High Grade Suede</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/red-codran.png" alt="Red Codran">
+                            </td>
+                            <td class="fruits-name">Red Codran</td>
+                            <td class="fruits-level">44 - 54</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/as.png" alt="Animal Skin">
+                                <span>Animal Skin</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/asofe.png" alt="Asofe">
+                                <span>Asofe</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/sea-codran.png" alt="Sea Codran">
+                            </td>
+                            <td class="fruits-name">Sea Codran</td>
+                            <td class="fruits-level">45 - 55</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/thread.png" alt="Thread">
+                                <span>Thread</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/cord.png" alt="Cord">
+                                <span>Cord</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/red-coba.png" alt="Red Coba">
+                            </td>
+                            <td class="fruits-name">Red Coba</td>
+                            <td class="fruits-level">65 - 75</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/synt-cokes.png" alt="Synthetic Cokes">
+                                <span>Synthetic Cokes</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ml.png" alt="Mold Lubricant">
+                                <span>Mold Lubricant</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/gold-coba.png" alt="Gold Coba">
+                            </td>
+                            <td class="fruits-name">Gold Coba</td>
+                            <td class="fruits-level">68 - 78</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/vop.png" alt="Varnish of Purity">
+                                <span>Varnish of Purity</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/mh.png" alt="Mold Hardener">
+                                <span>Mold Hardener</span>
+                            </td>
+                        </tr>
+                        <!-- Fruit Item -->
+                        <tr>
+                            <td class="fruits-img">
+                                <img src="images/fruits/desert-coba.png" alt="Desert Coba">
+                            </td>
+                            <td class="fruits-name">Desert Coba</td>
+                            <td class="fruits-level">71 - 81</td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/asofe.png" alt="Asofe">
+                                <span>Asofe</span>
+                            </td>
+                            <td class="fruits-bounty">
+                                <img src="images/resources/ma.png" alt="Mithril Alloy">
+                                <span>Mithril Alloy</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Calculator -->
+        <div class="calc">
+            <div class="calc__content">
+                <button class="calc__fruits" data-count="10000">
+                    <img src="./images/resources/mo.png" alt="Mithrill Ore">
+                    <p> Mithrill Ore</p>
+                </button>
+                <div class="calc__wrapper">
+                    <label class="calc__label">
+                        Кол-во плодов
+                        <input class="calc__quantity" type="text" placeholder="0">
+                    </label>
+                    <label class="calc__label">
+                        Цена закупки
+                        <input class="calc__cost" type="text" placeholder="0">
+                    </label>
+                </div>
+                <div class="calc__output">
+                    <div class="calc__output-wrapper">
+                        <div class="calc__output-name">Требуется плодов</div>
+                        <div class="calc__output-quantity"><span>0</span></div>
+                        <!-- <div class="calc__output-quantity">You need: <span>0</span></div> -->
+                    </div>
+                    <div class="calc__output-wrapper">
+                        <div class="calc__output-name">Получите</div>
+                        <div class="calc__output-res"><span>0</span></div>
+                        <!-- <div class="calc__output-res">You will get: <span>0</span></div> -->
+                    </div>
+                </div>
+                <!-- <button class="calc__btn">Calculate</button> -->
+                <button class="calc__btn">Расчитать</button>
+                <button class="calc-close-btn">Закрыть</button>
+            </div>
+        </div>
+        <!-- Resources -->
+        <div class="resources">
+            <div class="resources__content">
+                <button class="resources__btn-close">Закрыть</button>
+                <ul class="resources__list">
+                    <li class="resources__item" data-count="5000" data-img="an.png" data-descr="Adamantite Nugget">
+                        <img src="./images/resources/an.png" alt="Adamantite Nugget">
+                        <span>Adamantite Nugget</span>
+                    </li>
+                    <li class="resources__item" data-count="150" data-img="ab.png" data-descr="Animal Bone">
+                        <img src="./images/resources/ab.png" alt="Animal Bone">
+                        <span>Animal Bone</span>
+                    </li>
+                    <li class="resources__item" data-count="150" data-img="as.png" data-descr="Animal Skin">
+                        <img src="./images/resources/as.png" alt="Animal Skin">
+                        <span>Animal Skin</span>
+                    </li>
+                    <li class="resources__item" data-count="6000" data-img="asofe.png" data-descr="Asofe">
+                        <img src="./images/resources/asofe.png" alt="Asofe">
+                        <span>Asofe</span>
+                    </li>
+                    <li class="resources__item" data-count="500" data-img="bh.png" data-descr="Braided Hemp">
+                        <img src="./images/resources/bh.png" alt="Braided Hemp">
+                        <span>Braided Hemp</span>
+                    </li>
+                    <li class="resources__item" data-count="200" data-img="charcoal.png" data-descr="Charcoal">
+                        <img src="./images/resources/charcoal.png" alt="Charcoal">
+                        <span>Charcoal</span>
+                    </li>
+                    <li class="resources__item" data-count="200" data-img="coal.png" data-descr="Coal">
+                        <img src="./images/resources/coal.png" alt="Coal">
+                        <span>Coal</span>
+                    </li>
+                    <li class="resources__item" data-count="1500" data-img="cbp.png" data-descr="Coarse Bone Powder">
+                        <img src="./images/resources/cbp.png" alt="Coarse Bone Powder">
+                        <span>Coarse Bone Powder</span>
+                    </li>
+                    <li class="resources__item" data-count="1200" data-img="cokes.png" data-descr="Cokes">
+                        <img src="./images/resources/cokes.png" alt="Cokes">
+                        <span>Cokes</span>
+                    </li>
+                    <li class="resources__item" data-count="325" data-img="cord.png" data-descr="Cord">
+                        <img src="./images/resources/cord.png" alt="Cord">
+                        <span>Cord</span>
+                    </li>
+                    <li class="resources__item" data-count="5700" data-img="cl2.png" data-descr="Crafted Leather">
+                        <img src="./images/resources/cl2.png" alt="Crafted Leather">
+                        <span>Crafted Leather</span>
+                    </li>
+                    <li class="resources__item" data-count="8500" data-img="dmp.png" data-descr="Durable Metal Plate">
+                        <img src="./images/resources/dmp.png" alt="Durable Metal Plate">
+                        <span>Durable Metal Plate</span>
+                    </li>
+                    <li class="resources__item" data-count="12000" data-img="enria.png" data-descr="Enria">
+                        <img src="./images/resources/enria.png" alt="Enria">
+                        <span>Enria</span>
+                    </li>
+                    <li class="resources__item" data-count="2400" data-img="hgs.png" data-descr="High Grade Suede">
+                        <img src="./images/resources/hgs.png" alt="High Grade Suede">
+                        <span>High Grade Suede</span>
+                    </li>
+                    <li class="resources__item" data-count="200" data-img="io.png" data-descr="Iron Ore">
+                        <img src="./images/resources/io.png" alt="Iron Ore">
+                        <span>Iron Ore</span>
+                    </li>
+                    <li class="resources__item" data-count="900" data-img="leather2.png" data-descr="Leather">
+                        <img src="./images/resources/leather2.png" alt="Leather">
+                        <span>Leather</span>
+                    </li>
+                    <li class="resources__item" data-count="700" data-img="mf.png" data-descr="Metallic Fiber">
+                        <img src="./images/resources/mf.png" alt="Metallic Fiber">
+                        <span>Metallic Fiber</span>
+                    </li>
+                    <li class="resources__item" data-count="2000" data-img="mt.png" data-descr="Metallic Thread">
+                        <img src="./images/resources/mt.png" alt="Metallic Thread">
+                        <span>Metallic Thread</span>
+                    </li>
+                    <li class="resources__item" data-count="12100" data-img="ma.png" data-descr="Mithrill Alloy">
+                        <img src="./images/resources/ma.png" alt="Mithrill Alloy">
+                        <span>Mithrill Alloy</span>
+                    </li>
+                    <li class="resources__item" data-count="10000" data-img="mo.png" data-descr="Mithrill Ore">
+                        <img src="./images/resources/mo.png" alt="Mithrill Ore">
+                        <span>Mithrill Ore</span>
+                    </li>
+                    <li class="resources__item" data-count="6000" data-img="mg.png" data-descr="Mold Glue">
+                        <img src="./images/resources/mg.png" alt="Mold Glue">
+                        <span>Mold Glue</span>
+                    </li>
+                    <li class="resources__item" data-count="23000" data-img="mh.png" data-descr="Mold Hardener">
+                        <img src="./images/resources/mh.png" alt="Mold Hardener">
+                        <span>Mold Hardener</span>
+                    </li>
+                    <li class="resources__item" data-count="10000" data-img="ml.png" data-descr="Mold Lubricant">
+                        <img src="./images/resources/ml.png" alt="Mold Lubricant">
+                        <span>Mold Lubricant</span>
+                    </li>
+                    <!-- <li class="resources__item" data-count="24600" data-img="oriharukon.png" data-descr="Oriharukon">
+                        <img src="./images/resources/oriharukon.png" alt="Oriharukon">
+                        <span>Oriharukon</span>
+                    </li> -->
+                    <li class="resources__item" data-count="3000" data-img="oo.png" data-descr="Oriharukon Ore">
+                        <img src="./images/resources/oo.png" alt="Oriharukon Ore">
+                        <span>Oriharukon Ore</span>
+                    </li>
+                    <li class="resources__item" data-count="500" data-img="sn.png" data-descr="Silver Nugget">
+                        <img src="./images/resources/sn.png" alt="Silver Nugget">
+                        <span>Silver Nugget</span>
+                    </li>
+                    <li class="resources__item" data-count="2000" data-img="steel.png" data-descr="Steel">
+                        <img src="./images/resources/steel.png" alt="Steel">
+                        <span>Steel</span>
+                    </li>
+                    <li class="resources__item" data-count="100" data-img="stem.png" data-descr="Stem">
+                        <img src="./images/resources/stem.png" alt="Stem">
+                        <span>Stem</span>
+                    </li>
+                    <li class="resources__item" data-count="300" data-img="suede.png" data-descr="Suede">
+                        <img src="./images/resources/suede.png" alt="Suede">
+                        <span>Suede</span>
+                    </li>
+                    <li class="resources__item" data-count="6600" data-img="synt-cokes.png"
+                        data-descr="Synthetic Cokes">
+                        <img src="./images/resources/synt-cokes.png" alt="Synthetic Cokes">
+                        <span>Synthetic Cokes</span>
+                    </li>
+                    <li class="resources__item" data-count="6000" data-img="thons.png" data-descr="Thons">
+                        <img src="./images/resources/thons.png" alt="Thons">
+                        <span>Thons</span>
+                    </li>
+                    <li class="resources__item" data-count="100" data-img="thread.png" data-descr="Thread">
+                        <img src="./images/resources/thread.png" alt="Thread">
+                        <span>Thread</span>
+                    </li>
+                    <li class="resources__item" data-count="200" data-img="varnish.png" data-descr="Varnis">
+                        <img src="./images/resources/varnish.png" alt="Varnis">
+                        <span>Varnis</span>
+                    </li>
+                    <li class="resources__item" data-count="7100" data-img="vop.png" data-descr="Varnis Of Purity">
+                        <img src="./images/resources/vop.png" alt="Varnis Of Purity">
+                        <span>Varnis Of Purity</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
