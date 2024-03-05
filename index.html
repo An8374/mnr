@@ -22,13 +22,7 @@
             <!-- Control -->
             <div class="manor__btns">
                 <button class="calc-btn"></button>
-                <!-- <button class="castle-btn"></button> -->
                 <button class="fruit-btn"></button>
-            </div>
-            <div class="ms">
-                <button id="ms-minus" class="ms__btn">-</button>
-                <input id="ms-input" class="ms__input" type="text" autocomplete="off">
-                <button id="ms-plus" class="ms__btn">+</button>
             </div>
             <!-- Time -->
             <div class="manor__timer timer">
@@ -40,64 +34,6 @@
                     <span>:</span>
                     <div class="timer__seconds">00</div>
                 </div>
-            </div>
-        </div>
-        <!-- Manor Territory -->
-        <div class="territory">
-            <div class="territory__content">
-                <button class="close-btn">Close</button>
-                <ul class="castles">
-                    <li class="castles__item">
-                        <div class="territory__castle-name">Gludio Castle</div>
-                        <div class="territory__castle-location">
-                            Talking Island, Gludin Village, Forgotten Temple, Langk Lizardman Dwelling, Abandoned Camp,
-                            Fellmere Lake, Orc Barracks, Gludio Castle Town, Gludio Castle, Maille Lizrdman Barracks,
-                            Wasteland, The Ant Nest, Ruins of Agony, Ruins of Despair, Neutral Zone
-                        </div>
-                    </li>
-                    <li class="castles__item">
-                        <div class="territory__castle-name">Dion Castle</div>
-                        <div class="territory__castle-location">
-                            Dion Castle Town, Floran Village, Beehive, Execution Grounds, Partisan Hideaway, Cruma
-                            Tower,
-                            Monster Derby Track, Giran Harbor
-                        </div>
-                    </li>
-                    <li class="castles__item">
-                        <div class="territory__castle-name">Innadril Castle</div>
-                        <div class="territory__castle-location">
-                            Heine, Field of Silence, Field of Whispers, Innadril Castle, Devil's Isle, Pirate Tunnel,
-                            Garden
-                            of Eva
-                        </div>
-                    </li>
-                    <li class="castles__item">
-                        <div class="territory__castle-name">Giran Castle</div>
-                        <div class="territory__castle-location">
-                            Alligator Island, Tanor Canyon, Giran Castle Town, Giran Castle, Death Pass, Dragon Valley,
-                            Lair
-                            of Antharas
-                        </div>
-                    </li>
-                    <li class="castles__item">
-                        <div class="territory__castle-name">Oren Castle</div>
-                        <div class="territory__castle-location">
-                            Town of Oren, Dark Elven Village, Swampland, Black Magic Laboratory, Altar of Rites, Windy
-                            Hill,
-                            Elven Village, Iris Lake, Elven Fortress, Ivory Tower, Plains of the Lizardmen, Sea of
-                            Spores,
-                            Bandit Stronghold
-                        </div>
-                    </li>
-                    <li class="castles__item">
-                        <div class="territory__castle-name">Aden Castle</div>
-                        <div class="territory__castle-location">
-                            Town of Aden, Tower of Insolence, Border Outpost, Blazing Swamp, Giants Cave, The Cemetery,
-                            Forbidden Gateway, Devastated Castle, Forsaken Plains, Silent Valley, Narsell Lake, Anghell
-                            Waterfall, Forest of Mirrors, Enchanted Valley, Hunter Village
-                        </div>
-                    </li>
-                </ul>
             </div>
         </div>
         <!-- Fruits -->
@@ -1992,6 +1928,43 @@
                         <span>Varnish Of Purity</span>
                     </li>
                 </ul>
+            </div>
+        </div>
+        <div id="timecontrol" class="time-control hide">
+            <button class="time-control__close"></button>
+            <div class="ms">
+                <div class="ms__headline">min</div>
+                <div class="ms__wrap">
+                    <button id="min-minus" class="min__btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="min-input" class="min__input" type="text" autocomplete="off">
+                    <button id="min-plus" class="min__btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 8H15M8 15V1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="ms__headline">ms</div>
+                <div class="ms__wrap">
+                    <button id="ms-minus" class="ms__btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="ms-input" class="ms__input" type="text" autocomplete="off">
+                    <button id="ms-plus" class="ms__btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 8H15M8 15V1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </main>
